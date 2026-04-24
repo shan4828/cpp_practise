@@ -8,6 +8,12 @@ public:
 string name;
 float reading;
 
+//adding constructors
+tempSensor(string n, float r)
+{
+    name = n;
+    reading = r;
+}
 void read()
 {
     reading = 37.5;
@@ -23,6 +29,13 @@ class pressureSensor
     string name;
     float reading;
 
+    //adding constructors
+    pressureSensor(string n, float r)
+    {
+        name = n;
+        reading = r;
+    }
+
     void read()
     {
         reading = 2;
@@ -35,9 +48,8 @@ class pressureSensor
 
 int main()
 {
-    tempSensor ts;
-    pressureSensor ps;
-    ts.name= "TEMP_SENSOR_1";
+    tempSensor ts("TEMP_SENSOR_1", 23.6);
+    pressureSensor ps("PRESSURE_SENSOR_1", 5);
     ts.read();
     ts.print();
     ps.name="PRESSURE_SENSOR_1";
